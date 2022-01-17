@@ -1,6 +1,6 @@
 // Iteration 1: Names and Input
 
-const hacker1 = "Guilherme";
+const hacker1 = "Karina";
 console.log(`The drivers name is ${hacker1}.`)
 
 const hacker2 = "Guilherma";
