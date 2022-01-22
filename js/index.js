@@ -10,13 +10,13 @@ console.log(`"The navigator's name is ${hacker2}"`);
 // Iteration 2: Conditionals
 
 if (hacker1.length > hacker2.length) {
-   console.log(`The driver has the longest name, it has ${hacker1.length} characters.`);
-} else if (hacker1.length < hacker2.length) {
-   console.log(`It seems that the navigator has the longest name, it has ${hacker2.length} characters.`);
-} else if (hacker1.length === hacker2.length) {
-   console.log(`Wow, you both have equally long names, XX characters!`);
-} else {
-   console("try again");
+      console.log(`The driver has the longest name, it has ${hacker1.length} characters.`);
+   } else if (hacker1.length < hacker2.length) {
+      console.log(`It seems that the navigator has the longest name, it has ${hacker2.length} characters.`);
+   } else if (hacker1.length === hacker2.length) {
+      console.log(`Wow, you both have equally long names, ${hacker2.length} characters!`);
+   } else {
+      console("try again");
 };
 
 
@@ -28,11 +28,13 @@ let hacker1Capitals = hacker1.toUpperCase();
 let hacker1CapitalsSpaced = "";
 
 for (let i = 0; i < hacker1Capitals.length; i++) {
+
    if (i < hacker1Capitals.length - 1) {
       hacker1CapitalsSpaced += hacker1Capitals[i] + " "
    } else {
       hacker1CapitalsSpaced += hacker1Capitals[i]
    };
+
 };
 
 console.log(hacker1CapitalsSpaced);
@@ -89,24 +91,34 @@ const phraseToCheck = "Was it a car or a cat I saw?";
 const lettersString = "abcdefghijklmnopqrstuvwxyz";
 
 const clean = (string) => {
+
    let phraseLower = string.toLocaleLowerCase()
+
    let cleanPhrase = "";
+
    for (let i = 0; i < phraseLower.length; i++) {
       if (lettersString.includes(phraseLower[i])) {
          cleanPhrase += phraseLower[i];
       };
    };
+
    return cleanPhrase;
+
 }
 
+
 const isPalindrome = (string) => {
+
    const cleanPhrase = clean(string);
+
    for (let i = 0; i < cleanPhrase.length/2; i++) {
       if (cleanPhrase[i] !== cleanPhrase[cleanPhrase.length - 1 - i]) {
          return false;
       }
    }
+
    return true;
+
 }
 
 console.log(isPalindrome(phraseToCheck));
